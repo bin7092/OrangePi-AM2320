@@ -14,5 +14,9 @@ from src import am2320
 
 sensor = am2320.AM2320()
 
-print(f"Temperature: {sensor.ReadTemperature()} C")
-print(f"Humidity: {sensor.ReadHumidity()} RH")
+for i in range(0, 10):
+    print(f"----------------第{i}次测试结果----------------")
+    print(f"Temperature: {sensor.ReadTemperature()} C")
+    print(f"Humidity: {sensor.ReadHumidity()} RH")
+    for x in sensor.ReadTemperatureHumidity():
+        print(x)
