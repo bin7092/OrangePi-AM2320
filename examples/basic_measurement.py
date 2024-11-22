@@ -7,6 +7,9 @@ https://github.com/mcauser/micropython-am2320
 
 Prints the temperature and humidity
 """
+import sys
+sys.path.append("..")
+
 from src import am2320
 
 sensor = am2320.AM2320()
